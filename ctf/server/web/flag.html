@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Submit The Flag</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="/static/css/flag.css"/>
+    </head>
+    <body>
+       {{success|safe}}
+       {{error|safe}}
+       <div id="error-submit"></div>
+       <div class="align">
+         <div class="flag">
+           <h1 class="text">Submit Flag</h1>
+           <form action="" method="post" onsubmit="return flag_submit();">
+             {% csrf_token %}
+               <input type="text" class="leet" name="leet" placeholder="Leet">
+               <input type="text" class="flag-submit" name="submit-flag" placeholder="Flag">
+               <input type="submit" class="send" value="submit">
+           </form>
+         </div>
+       </div>
+       <script src="/static/js/flag.js"></script>
+    </body>
+</html>

@@ -1,0 +1,81 @@
+body {
+   position: relative;
+   background-color: rgb(21, 2, 29);
+}
+.align {
+   display: flex;
+   justify-content: center;
+}
+.flag {
+   background-color: rgb(29, 7, 116);
+   padding: 20px;
+   border-radius: 6px;
+   margin-top: 6%;
+}
+.text {
+   color: white;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+input[type='text'] {
+   color: white;
+   padding: 8px;
+   border: none;
+   background-color: rgb(21, 2, 29);
+   outline: none;
+}
+.leet {
+   border-radius: 6px;
+}
+.flag-submit {
+   border-top-left-radius: 6px;
+   border-bottom-left-radius: 6px;
+   border-top-right-radius: none;
+   border-bottom-right-radius: none;
+}
+input[type='submit'] {
+   background-color: rgb(179, 9, 128);
+   border: none;
+   color: white;
+   padding: 8px;
+   float: right;
+   border-top-right-radius: 6px;
+   border-bottom-right-radius: 6px;
+}
+.success {
+   background-color: rgba(4, 122, 4, 0.595);
+   width: 240px;
+   padding: 16px;
+   border-radius: 6px;
+   margin-left: auto;
+   margin-right: auto;
+}
+.success-message {
+   text-align: center;
+   color: green;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   font-size: 20px;
+}
+.error, .err-submit {
+   background-color: rgba(255, 3, 3, 0.391);
+   width: 240px;
+   padding: 16px;
+   border-radius: 6px;
+   margin-left: auto;
+   margin-right: auto;
+}
+.error-message, .err-message {
+   text-align: center;
+   color: red;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   font-size: 20px;
+}
+@media (max-width: 480px) {
+   form {
+      display: flex;
+      flex-direction: column;
+   }
+   .flag-submit, input[type="submit"] {
+      margin-top: 6%;
+      border-radius: 6px;
+   }
+}

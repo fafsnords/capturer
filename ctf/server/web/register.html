@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sign up</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="/static/css/register.css"/>
+    </head>
+    <body>
+       <div class="content">
+         <div class="background">
+           <div class="form">
+             {{data|safe}}
+             <div id="error-submit"></div>
+             <h1>Sign-up</h1>
+             <form action="" method="post" onsubmit="return register();">
+               {% csrf_token %}
+                 <input type="username" class="username" name="user" placeholder="username"></br>
+                 <input type="password" class="password" name="pass" placeholder="password"></br>
+                 <input type="password" class="retype-password" name="retype-pass" placeholder="retype-password"></br>
+                 <input type="submit" class="auth" value="Sign-up"></br></br>
+                 <a href="/sign_in">sign-in</a>
+             </form>
+            </div>
+         </div>
+       </div>
+       <script src="/static/js/auth.js"></script>
+    </body>
+</html>

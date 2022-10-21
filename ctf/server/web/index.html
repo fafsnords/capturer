@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Capture The Flag</title>
+        <meta charset="utf-8">
+        <meta name="description" content="a ctf challenge for beginner and advance test your skill">
+        <meta name="keywords" content="html, css, js">
+        <meta name="author" content="rev">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Blaka&family=Creepster&family=Darker+Grotesque:wght@300;400&family=Eater&family=Josefin+Slab:ital,wght@0,100;0,200;1,100&family=Podkova&family=Press+Start+2P&family=Rajdhani:wght@300&family=Reggae+One&family=Staatliches&family=Syne+Mono&family=VT323&display=swap"/>
+        <link rel="stylesheet" type="text/css" href="/static/css/style.css"/>
+    </head>
+    <body>
+      <!--
+        Facebook: https://www.facebook.com/rec.kun.9
+        Github: https://github.com/fafsnords
+        Codepen: https://codepen.io/fafsnords
+      -->
+      <div class="header">
+        <a href="http://127.0.0.1:8000/">
+         <div class="banner">
+           <h1>CAPTURER</h1>
+         </div>
+        </a>
+        <div class="menu">
+          <div class="click">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
+        </div>
+        <ul class="nav">
+          <li class="nav-link"><a href="http://127.0.0.1:8000/" class="link">Home</a></li>
+          <li class="nav-link"><a href="#" class="link">About</a></li>
+          <li class="nav-link"><a href="#" class="link">Contact</a></li>
+          <li class="nav-link"><a href="/sign_in" class="login">Sign-in</a></li>
+        </ul>
+      </div>
+      <div class="content">
+        <div class="play">
+          <a href="/challenge" class="link-ctf">Capture The Flag</a>
+            <p>
+              Capture the Flag:</br>
+              It's a game for hack:</br>
+              I mean security professional
+            </p>
+        </div>
+        <ul class="event">
+          <li class="event-link"><a href="#" class="item">ctf category</a></li>
+          <li class="event-link"><a href="/hall_of_fame" class="item">hall of fame</a></li>
+        </ul>
+        <div class="list">
+          <ul class="list-category">
+            <li class="item-category">cryptography</li>
+            <li class="item-category">steganography</li>
+            <li class="item-category">reverse engineering</li>
+            <li class="item-category">analysis</li>
+            <li class="item-category">directory listing</li>
+            <li class="item-category">recon</li>
+          </ul>
+        </div>
+      </div>
+         <script>
+            function drop_category() {
+              document.querySelector('.list').classList.toggle('drop-category');
+            }
+            function drop_down() {
+              document.querySelector('.nav').classList.toggle('drop-down');
+            }
+            document.querySelector('.item').addEventListener('click', drop_category);
+            document.querySelector('.click').addEventListener('click', drop_down);
+         </script>
+    </body>
+</html>
