@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hall of Fame</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Blaka&family=Creepster&family=Darker+Grotesque:wght@300;400&family=Eater&family=Josefin+Slab:ital,wght@0,100;0,200;1,100&family=Podkova&family=Press+Start+2P&family=Rajdhani:wght@300&family=Reggae+One&family=Staatliches&family=Syne+Mono&family=VT323&display=swap"/>
+        <link rel="stylesheet" type="text/css" href="/static/css/hall-of-fame.css"/>
+    </head>
+    <body>
+       <div class="home">
+         <a href="http://127.0.0.1:8000/">Home</a>
+       </div>
+       <div class="banner">
+         <h1>Hall of Fame</h1>
+       </div>
+
+       <div class="cryptography">
+         <div class="crypt">
+           <h1>cryptography</h1>
+         </div>
+         <div class="cipher">
+           {% for cipher in Cipher %}
+             <h1>{{cipher.cipher}}</h1>
+           {% endfor %}
+         </div>
+       </div>
+
+       <div class="steganography">
+         <div class="steg">
+           <h1>steganography</h1>
+         </div>
+         <div class="stegano">
+           {% for stegano in Stegano %}
+             <h1>{{stegano.stegano}}</h1>
+           {% endfor %}
+         </div>
+       </div>
+
+       <div class="reverse-engineering">
+         <div class="reverse">
+           <h1>reverse engineering</h1>
+         </div>
+         <div class="reverseengr">
+           {% for reverseengr in ReverseEngr %}
+             <h1>{{reverseengr.reverseengr}}</h1>
+           {% endfor %}
+         </div>
+      </div>
+
+      <div class="analysis">
+        <div class="analyze">
+          <h1>Analysis</h1>
+        </div>
+        <div class="analize">
+          {% for analysis in Analysis %}
+            <h1>{{analysis.analysis}}</h1>
+          {% endfor %}
+       </div>
+     </div>
+
+     <div class="dir-listing">
+       <div class="dir">
+         <h1>directory listing</h1>
+       </div>
+       <div class="dirlisting">
+         {% for dirlisting in DirListing %}
+           <h1>{{dirlisting.dirlisting}}</h1>
+         {% endfor %}
+       </div>
+     </div>
+
+     <div class="gather">
+       <div class="rec">
+         <h1>recon</h1>
+       </div>
+       <div class="recon">
+         {% for recon in Recon %}
+           <h1>{{recon.recon}}</h1>
+         {% endfor %}
+       </div>
+     </div>
+     <script src="/static/js/hall-of-fame.js"></script>
+    </body>
+</html>
