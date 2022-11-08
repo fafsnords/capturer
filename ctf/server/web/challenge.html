@@ -1,64 +1,105 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>List of Challenge</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="/static/css/challenge.css"/>
-    </head>
-    <body>
-       <div class="header">
-         <div class="menu">
-           <a href="#" class="drop">Menu</a>
-         </div>
-         <ul class="nav">
-           <li class="nav-link"><a href="http://127.0.0.1:8000/" class="link">Home</a></li>
-           <li class="nav-link"><a href="/challenge/flag" class="link">Submit-flag</a></li>
-           <li class="nav-link"><a href="/challenge/log_out" class="link">Log-out</a></li>
-        </ul>
-       </div>
-       <div class="align">
-         <div class="align-cryptography">
-           <h1>cryptography</h1>
-           <div class="cryptography">
-             <a href="#" class="chall-link">play</a>
-           </div>
-         </div>
-         <div class="align-steganography">
-           <h1>steganography</h1>
-           <div class="steganography">
-             <a href="#" class="chall-link">play</a>
-           </div>
-         </div>
-         <div class="align-reverse-engineering">
-           <h1>reverse engineering</h1>
-           <div class="reverse-engineering">
-             <a href="#" class="chall-link">play</a>
-           </div>
-         </div>
-         <div class="align-analysis">
-           <h1>analysis</h1>
-           <div class="analysis">
-             <a href="#" class="chall-link">play</a>
-           </div>
-         </div>
-         <div class="align-dir-listing">
-           <h1>diretory listing</h1>
-           <div class="dir-listing">
-             <a href="#" class="chall-link">play</a>
-           </div>
-         </div>
-         <div class="align-recon">
-           <h1>recon</h1>
-           <div class="recon">
-             <a href="#" class="chall-link">play</a>
-           </div>
-         </div>
-       </div>
-       <script>
-          function drop() {
-             document.querySelector('.nav').classList.toggle('item');
-          }
-          document.querySelector('.drop').addEventListener('click', drop);
-       </script>
-    </body>
+  <head>
+    {% load static %}
+    <title>ctf challenge zone</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/challenge.css' %}"/>
+  </head>
+  <body>
+    <!--choose and play the type of game-->
+    <div class="dropdown">
+      <div class="menu">
+        Menu
+      </div>
+      <div class="item">
+        <div class="list">
+          <a href="/" class="drop-link">Home</a>
+          <a href="/challenge/flag/" class="drop-link">Submit Flag</a>
+          <a href="/challenge/settings/" class="drop-link">Settings</a>
+          <a href="/challenge/log_out/" class="drop-link">Log out</a>
+        </div>
+      </div>
+    </div>
+    <div class="align-challenge">
+      <div class="challenge">
+        <div class="ctf">
+          <div class="cryptography">
+            <p>Cryptography</p>
+          </div>
+          <div class="play">
+            <a href="#" class="ctf-link">
+              <p>play</p>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="challenge">
+        <div class="ctf">
+          <div class="steganography">
+            <p>Steganography</p>
+          </div>
+          <div class="play">
+            <a href="#" class="ctf-link">
+              <p>play</p>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="challenge">
+        <div class="ctf">
+          <div class="reverse-engineering">
+            <p>Reverse Engineering</p>
+          </div>
+          <div class="play">
+            <a href="#" class="ctf-link">
+              <p>play</p>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="challenge">
+        <div class="ctf">
+          <div class="analysis">
+            <p>Analysis</p>
+          </div>
+          <div class="play">
+            <a href="#" class="ctf-link">
+              <p>play</p>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="challenge">
+        <div class="ctf">
+          <div class="directory-listing">
+            <p>Directory Listing</p>
+          </div>
+          <div class="play">
+            <a href="#" class="ctf-link">
+              <p>play</p>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="challenge">
+        <div class="ctf">
+          <div class="reconnaissance">
+            <p>Reconnaissance</p>
+          </div>
+          <div class="play">
+            <a href="#" class="ctf-link">
+              <p>play</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      let drop = () => {
+         document.querySelector('.item').classList.toggle('drop');
+      }
+      document.querySelector('.menu').addEventListener('click', drop);
+    </script>
+  </body>
 </html>

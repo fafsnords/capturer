@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% load static %}
+        <title>Settings</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/settings.css' %}"/>
+    </head>
+    <body>
+      <div class="challenge">
+        <div class="click">
+          <a href="/challenge/" class="challenge-link">
+            <p>challenge</p>
+          </a>
+        </div>
+      </div>
+      <div class="align-form">
+        <div class="response-message">
+          {{success|safe}}
+          {{error|safe}}
+          <div id="error-submit"></div>
+        </div>
+        <div class="setting-list">
+          <div class="settings">
+            Settings
+          </div>
+        </div>
+        <!--change username-->
+        <div class="form">
+          <div class="change-username">
+            Change Username
+          </div>
+          <div class="change-username-form">
+            <form action="" method="post" onsubmit="return username_validate();">
+              {% csrf_token %}
+                <input type="username" class="new-user" name="new_username" placeholder="New Username"></br>
+                <input type="username" class="current-user" name="current_username" placeholder="Current Username"></br>
+                <input type="password" class="pass" name="pass" placeholder="Password"></br>
+                <input type="submit" value="Change Username">
+            </form>
+          </div>
+        </div>
+        <!--change password-->
+        <div class="form">
+          <div class="change-password">
+            Change Password
+          </div>
+          <div class="change-password-form">
+            <form action="" method="post" onsubmit="return password_validate();">
+              {% csrf_token %}
+                <input type="username" class="user" name="user" placeholder="Username"></br>
+                <input type="password" class="new-pass" name="new_password" placeholder="New Password"></br>
+                <input type="password" class="current-pass" name="current_password" placeholder="Current Password"></br>
+                <input type="submit" value="Change Password">
+            </form>
+          </div>
+        </div>
+        <!--delete account-->
+        <div class="form">
+          <div class="delete-account">
+            Delete Account
+          </div>
+          <div class="delete-account-form">
+            <form action="" method="post" onsubmit="return delete_user_validate();">
+              {% csrf_token %}
+                <input type="username" class="del-user" name="del_username" placeholder="Username"></br>
+                <input type="password" class="del-pass" name="del_password" placeholder="Password"></br>
+                <input type="submit" value="Delete Account">
+            </form>
+          </div>
+        </div>
+      </div>
+      <script src="{% static 'js/settings.js' %}"></script>
+    </body>
+</html>

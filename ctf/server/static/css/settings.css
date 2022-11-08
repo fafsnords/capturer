@@ -1,7 +1,7 @@
 body {
-  background-color: rgb(16, 1, 24);
+ background-color: rgb(16, 1, 24);
 }
-.home {
+.challenge {
   display: flex;
   justify-content: center;
 }
@@ -12,7 +12,7 @@ body {
   border-radius: 4px;
   transition-duration: 1s;
 }
-.home > .click > .home-link {
+.challenge > .click > .challenge-link {
   text-decoration: none;
   text-align: center;
   color: white;
@@ -21,17 +21,17 @@ body {
 .click:hover {
   background-color: darkslateblue;
 }
-.align-challenge {
+.align-form {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 6%;
 }
-.align-challenge > .solver-list {
+.align-form > .setting-list {
   background-color: rgb(4, 24, 89);
   cursor: auto;
 }
-.align-challenge > .challenge > .cryptography, .steganography, .reverse-engineering, .analysis, .directory-listing, .reconnaissance, .solver-list {
+.change-username, .change-password, .delete-account, .setting-list {
   background:  transparent;
   text-align: center;
   cursor: pointer;
@@ -42,24 +42,41 @@ body {
   transition-duration: 1s;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-.align-challenge > .challenge > div:hover {
+.change-username-form, .change-password-form, .delete-account-form {
+  display: block;
   background-color: rgba(92, 6, 167, 0.505);
-}
-.cipher-results, .stegano-results, .reverse-engineering-results, .analysis-results, .directory-listing-results, .reconnaissance-results {
-  background-color: rgba(92, 6, 167, 0.505);
-  border-radius: 2px;
-  text-align: center;
-  font-weight: bold;
-  padding: 12px;
   width: 200px;
-  margin-left: auto;
-  margin-right: auto;
-  color: white;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  padding: 20px;
   display: none;
 }
-.challengers {
-  margin-top: 5%;
+.align-form > .form > div:hover {
+  background-color: rgba(92, 6, 167, 0.505);
+}
+form > input {
+  display: block;
+  padding: 8px;
+  border-radius: 2px;
+  border: none;
+  outline: none;
+}
+form > input[type="submit"] {
+  text-align: center;
+  background-color: rgb(13, 54, 187);
+  color: white;
+  cursor: pointer;
+}
+.success, .error, .error-submit {
+  text-align: center;
+  padding: 6px;
+  width: 200px;
+  color: white;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.success {
+  background-color: rgb(3, 91, 3);
+}
+.error, .error-submit {
+  background-color: rgb(110, 4, 4);
 }
 .drop {
   display: block;

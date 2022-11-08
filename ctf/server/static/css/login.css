@@ -1,106 +1,53 @@
 body {
+  background-color: rgb(16, 1, 24);
   position: relative;
-  background-color: rgb(15, 4, 33);
 }
-.content {
+.align-form {
   display: flex;
   justify-content: center;
-  margin-top: 2%;
+  margin-top: 10%;
 }
-.background {
-  background-color: rgb(29, 7, 116);
-  border-radius: 4px;
-  box-shadow: -3px 5px 52px 14px rgba(0, 0, 0, 0.863);
-  -webkit-box-shadow: -3px 5px 52px 14px rgba(0, 0, 0, 0.863);
-  -moz-box-shadow: -3px 5px 52px 14px rgba(0, 0, 0, 0.863);
-  width: 30%;
-  height: 600px;
+.login-form {
+  border: 3px solid white;
+  border-radius: 8px;
+  padding: 16px;
+  margin-top: 6%;
 }
-.form {
-  margin-top: 4%;
-  text-align: center;
-}
-form {
-  margin-top: 20%;
-}
-h1 {
-  color: white;
-}
-input[type="username"], input[type="password"], input[type="text"] {
-  padding: 10px;
-  border-radius: 6px;
-  outline: none;
-  border: none;
-  color: white;
-  margin-top: 5%;
-  background-color: rgb(21, 2, 29);
-}
-input[type="submit"] {
-  background-color: rgb(179, 9, 128);
+h2 {
   text-align: center;
   color: white;
-  width: 46%;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+form > input {
+  background: transparent;
+  border: 3px solid white;
   padding: 8px;
-  border-radius: 6px;
-  border: none;
+  border-radius: 4px;
+  outline: none;
+  color: white;
+  margin-top: 6%;
 }
-input[type="submit"]:hover {
-  background-color: rgb(5, 102, 70);
+.submit {
+  background-color: rgb(2, 14, 56);
+  border-radius: 4px;
+  color: white;
+  width: 100%;
+  cursor: pointer;
 }
-input {
-  margin-top: 10px;
+.submit:hover {
+  background-color: rgb(2, 45, 130);
 }
 a {
-  color: rgb(7, 168, 66);
+  margin-left: 38%;
+  color: aqua;
 }
-.error-login, .err-submit {
-  background-color: rgb(116, 9, 9);
-  width: 240px;
-  padding: 8px;
-  border-radius: 6px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.login-message, .err-message {
+.error-login, .error-submit {
   text-align: center;
-  color: red;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 20px;
+  color: white;
+  padding: 6px;
+  border-radius: 4px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-@media (max-width: 740px) {
-    .background {
-       width: 50%;
-    }
-    input[type="submit"] {
-      width: 52%;
-    }
- }
- @media (max-width: 660px) {
-    .background {
-       width: 50%;
-    }
-    input[type="submit"] {
-       width: 58%;
-    }
- }
- @media (max-width: 480px) {
-    .background {
-       width: 60%;
-    }
-    input[type="submit"] {
-       width: 68%;
-    }
- }
- @media (max-width: 375px) {
-    .background {
-        width: 80%;
-    }
-    input[type="submit"] {
-        width: 65%;
-    }
- }
- @media (max-width: 360px) {
-    input[type="submit"] {
-        width: 68%;
-    }
- }
+.error-login, .error-submit {
+  background-color: rgb(110, 4, 4);
+}

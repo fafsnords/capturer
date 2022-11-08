@@ -1,0 +1,49 @@
+body {
+  background-color: rgb(16, 1, 24);
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 8%;
+}
+.content > .header > .banner {
+  font-family: 'Press Start 2P';
+  color: aqua;
+  font-size: 20px;
+}
+.nav {
+  margin-right: 3%;
+}
+.content > .nav > .links > ul > li {
+  display: inline;
+  list-style-type: none;
+}
+.nav > .links > ul > li > a {
+  color: white;
+  text-align: center;
+  padding: 6px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.content > .main {
+  margin-top: 3%;
+}
+.content > .main > .text {
+  color: white;
+  font-family: 'Press Start 2P';
+  text-align: center;
+}
+@media (max-width: 375px) {
+  .content {
+    margin-top: 40%;
+  }
+  .header > .banner {
+    font-size: 16px;
+  }
+  .nav > .links {
+    margin-right: 26px;
+  }
+  .main > .text {
+    font-size: 13px;
+  }
+}

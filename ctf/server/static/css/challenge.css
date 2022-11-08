@@ -1,118 +1,93 @@
-* {
-  margin: auto 0;
-}
 body {
-  position: relative;
-  background-color: rgb(21, 2, 29);
+  background-color: rgb(16, 1, 24);
 }
-.header {
+.dropdown {
   display: flex;
   justify-content: center;
-  margin-top: 2%;
 }
 .menu {
-  display: none;
-}
-.drop {
-  background-color: rgb(6, 51, 106);
-  text-decoration: none;
-  color: white;
+  background: transparent;
   padding: 16px;
-  text-align: center;
+  border: 3px solid white;
   border-radius: 6px;
-}
-.drop:hover {
-  background-color: brown;
-}
-ul {
-  display: flex;
-  justify-content: flex-end;
-}
-ul > li {
-  list-style-type: none;
-  padding: 30px;
-}
-ul > li > .link {
-  text-decoration: none;
+  border-bottom: none;
   color: white;
-  background-color: rgb(0, 30, 255);
-  padding: 16px;
-  border-radius: 50%;
-  text-align: center;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition-duration: 1s;
 }
-ul > li > .link:hover {
-  background-color: rgb(8, 55, 55);
-}
-.align {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.align-cryptography, .align-steganography, .align-reverse-engineering, .align-analysis, .align-dir-listing, .align-recon {
-  background-color: rgb(29, 7, 116);
-  width: 400px;
-  padding: 16px;
-  margin-top: 40px;
-  margin-left: 2%;
-  border-radius: 2px;
-}
-.cryptography, .steganography, .reverse-engineering, .analysis, .dir-listing, .recon {
-  background-color: rgb(21, 2, 29);
-  padding: 6px;
-  width: 40px;
-  text-align: center;
-  margin-top: 6%;
-  border-radius: 6px;
-}
-h1 {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  color: white;
-}
-.chall-link {
-  text-decoration: none;
-  color: rgb(119, 103, 103);
-}
-.chall-link:hover {
-  color: white;
+.menu:hover {
+  background-color: darkslateblue;
+  cursor: pointer;
 }
 .item {
+  background-color: white;
+  box-shadow: 2px 2px 2px rgba(104, 5, 157, 0.582), -2px 2px 2px rgba(104, 5, 157, 0.582), 0 -2px 4px rgba(104, 5, 157, 0.582);
+  width: 200px;
+  position: absolute;
+  top: 10%;
+  border-radius: 2px;
+  z-index: 2;
+  display: none;
+}
+.list > .drop-link {
+  display: block;
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: bold;
+  color: black;
+}
+.list > .drop-link:hover {
+  background-color: black;
+  color: white;
+}
+.drop {
   display: block;
 }
-@media (max-width: 500px) {
-  .align-cryptography, .align-steganography, .align-reverse-engineering, .align-analysis, .align-dir-listing, .align-recon {
-     width: 240px;
+.align-challenge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.challenge {
+  border: 3px solid white;
+  width: 240px;
+  border-radius: 4px;
+  margin-top: 2%;
+}
+.ctf-link {
+  text-decoration: none;
+  color: white;
+}
+.play:hover {
+  background-color: darkslateblue;
+}
+.play {
+  margin-left: 80%;
+  background-color: black;
+  text-align: center;
+  padding: 2px;
+  transition-duration: 1s;
+  border-left: 3px solid white;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.ctf {
+  position: relative;
+}
+.cryptography, .steganography, .reverse-engineering, .analysis, .directory-listing, .reconnaissance {
+  position: absolute;
+  color: white;
+  font-weight: bold;
+  left: 2%;
+  padding: 2px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+@media (max-width: 480px) {
+  .item {
+    top: 9%;
   }
-  ul {
-    display: flex;
-    justify-content: center;
-  }
-  .header {
+  .challenge {
     margin-top: 8%;
-  }
-  .menu {
-    display: block;
-  }
-  ul {
-    position: absolute;
-    bottom: 80%;
-  }
-  ul {
-    background-color: black;
-    width: 280px;
-    border-radius: 6px;
-    display: none;
-    padding: 0px;
-  }
-  ul > li > .link {
-    background: none;
-    border-radius: 0%;
-  }
-  ul > li > .link:hover {
-    background: none;
-    color: rgb(2, 50, 55);
-  }
-  ul > li {
-    padding: 16px;
   }
 }

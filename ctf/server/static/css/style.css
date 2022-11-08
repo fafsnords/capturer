@@ -1,308 +1,82 @@
-* {
-  margin: auto 0;
-  box-sizing: border-box;
-}
 body {
+  background-color: rgb(16, 1, 24);
   position: relative;
-  background-image: url('/static/image/ctf.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  margin: auto 0;
 }
 .content {
-  position: fixed;
-  background-color: rgba(19, 4, 69, 0.959);
-  height: 200vh;
-  width: 240%;
+  margin-top: 8%;
 }
 .header {
-  background-color: rgb(15, 4, 33);
-  height: 100px;
-  max-width: 240vh;
+  display: flex;
+  justify-content: center;
 }
-.banner {
-  position: absolute;
-  top: 36%;
-  left: 2%;
-  color: rgb(0, 128, 51);
+.header > .banner {
+  color: aqua;
+  font-size: 20px;
   font-family: 'Press Start 2P';
 }
-.menu {
-  display: none;
-}
-.line {
-  background-color: white;
-  width: 36px;
-  height: 2px;
-  margin-top: 8px;
-}
 .nav {
-  position: absolute;
-  top: 40%;
-  left: 56%;
+  display: flex;
+  justify-content: center;
+  margin-right: 3%;
 }
-.nav-link {
-  list-style-type: none;
+.nav > .links > ul > li {
   display: inline;
-  font-size: 20px;
+  list-style-type: none;
 }
-.nav > .nav-link > .link {
+.nav > .links > ul > li > a {
+  color: white;
+  text-align: center;
+  padding: 6px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  text-decoration: none;
-  padding: 30px;
-  color: white;
 }
-.nav > .nav-link > .login {
-  color: white;
-  text-decoration: none;
-  background-color: rgb(157, 11, 159);
-  padding: 16px;
-  border-radius: 8px;
+.main {
+  display: flex;
+  justify-content: center;
+  margin-top: 3%;
 }
-.nav > .nav-link > .link:hover {
-  color: rgb(3, 61, 61);
-}
-.nav > .nav-link > .login:hover {
-  background-color: rgb(8, 55, 55);
-}
-.play {
-  position: absolute;
-  left: 60vh;
-  top: 8vh;
-}
-.link-ctf {
-  text-decoration: none;
-  color: white;
-  background-color: rgb(152, 53, 6);
-  padding: 16px;
-  border-radius: 6px;
-  margin-left: 38%;
-}
-.link-ctf:hover {
-  background-color: black;
-}
-p {
+.main > .text {
   text-align: center;
   color: white;
   font-family: 'Press Start 2P';
-  margin-top: 12%;
-  font-size: 20px;
 }
-.event {
-  position: absolute;
-  left: 72vh;
-  top: 40vh;
+.game {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 2%;
 }
-.event-link {
-  display: inline;
-  padding: 20px;
-}
-.item {
-  background-color: rgb(9, 83, 57);
-  border-radius: 2px;
-  text-decoration: none;
-  color: white;
-  padding: 16px;
-  font-size: 20px;
-}
-.item:hover {
-  background-color: black;
-}
-.list {
-  background-color: black;
-  width: 200px;
-  position: absolute;
-  left: 51vh;
-  top: 251px;
+.game > .row > .play > .click {
+  border: 3px solid white;
+  padding: 0 8px 0 8px;
   border-radius: 6px;
-  display: none;
-  border-top-right-radius: 0%;
-}
-.list > .list-category > .item-category {
-  list-style-type: none;
-  color: white;
-  padding: 4px;
-  font-size: 20px;
+  margin-right: 10px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-.drop-category {
-  display: block;
+.game > .row > .play > .click > a {
+  color: white;
+  text-decoration: none;
 }
-@media (max-width: 780px) {
-  body {
-    background-position: 45%;
-  }
-  .banner {
-    top: 36%;
-  }
-  h1 {
-    font-size: 24px;
-  }
-  .menu {
-    display: block;
-  }
-  .click {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    left: 88%;
-    top: 30%;
-  }
-  .nav {
-    background-color: white;
-    border-radius: 4px;
-    width: 180px;
-    left: 70%;
-    top: 62%;
-    z-index: 2;
-    display: none;
-  }
-  .link, .login {
-    display: block;
-  }
-  .nav > .nav-link > .link {
-    padding: 16px;
-    color: black;
-  }
-  .nav > .nav-link > .login {
-    background: none;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: black;
-  }
-  .nav > .nav-link > .login:hover {
-    background: none;
-    color: rgb(3, 61, 61);
-  }
-  .play {
-    left: 5%;
-  }
-  p {
-    font-size: 20px;
-  }
-  .link-ctf {
-    margin-left: 36%;
-  }
-  .event {
-    top: 40vh;
-    left: 9%;
-  }
-  .event-link {
-    display: inline;
-    margin-top: 6%;
-  }
-  .item {
-    font-size: 18px;
-  }
-  .list {
-    top: 304px;
-    left: 10%;
-    border-top-right-radius: 6px;
-  }
-  .drop-down {
-    display: block;
-  }
+.nav > ul > li > a:hover {
+  background-color: rgba(2, 53, 87, 0.865);
 }
-@media (max-width: 480px) {
-  body {
-    background-position: 45%;
-  }
-  .banner {
-    top: 36%;
-  }
-  h1 {
-    font-size: 24px;
-  }
-  .menu {
-    display: block;
-  }
-  .click {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    left: 88%;
-    top: 30%;
-  }
-  .nav {
-    background-color: white;
-    border-radius: 4px;
-    width: 180px;
-    left: 58%;
-    top: 62%;
-    z-index: 2;
-    display: none;
-  }
-  .link, .login {
-    display: block;
-  }
-  .nav > .nav-link > .link {
-    padding: 16px;
-    color: black;
-  }
-  .nav > .nav-link > .login {
-    background: none;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: black;
-  }
-  .nav > .nav-link > .login:hover {
-    background: none;
-    color: rgb(3, 61, 61);
-  }
-  .play {
-    left: 4%;
-  }
-  p {
-    font-size: 14px;
-  }
-  .link-ctf {
-    margin-left: 30%;
-  }
-  .event {
-    top: 30vh;
-    left: 20px;
-  }
-  .event-link {
-    display: block;
-    margin-top: 6%;
-  }
-  .list {
-    top: 20%;
-    left: 6vh;
-  }
-  .drop-down {
-    display: block;
-  }
+.game > .row > .play > .click:hover {
+  background-color: rgba(2, 53, 87, 0.865);
+}
+.nav > .links > ul > li > a:hover {
+  color: rgba(2, 53, 87, 0.865);
 }
 @media (max-width: 375px) {
-  .nav {
-    left: 50%;
+  .content {
+    margin-top: 40%;
   }
-  .play {
-    left: 5%;
-  }
-  .link-ctf {
-    margin-left: 24%;
-  }
-  p {
-    font-size: 10px;
-    margin-top: 23%;
-  }
-  .event {
-    left: 64px;
-    top: 30vh;
-  }
-  .item {
+  .header > .banner {
     font-size: 16px;
   }
-  .list {
-    top: 264px;
+  .nav > .links {
+    margin-right: 26px;
   }
-}
-@media screen and (max-width: 360px) {
-   .nav {
-     border-top-right-radius: 0%;
-     border-bottom-right-radius: 0%;
-   }
-   .list {
-     top: 299px;
-   }
+  .main > .text {
+    font-size: 13px;
+  }
 }

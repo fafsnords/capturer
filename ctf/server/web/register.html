@@ -1,28 +1,29 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Sign up</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="/static/css/register.css"/>
-    </head>
-    <body>
-       <div class="content">
-         <div class="background">
-           <div class="form">
-             {{data|safe}}
-             <div id="error-submit"></div>
-             <h1>Sign-up</h1>
-             <form action="" method="post" onsubmit="return register();">
-               {% csrf_token %}
-                 <input type="username" class="username" name="user" placeholder="username"></br>
-                 <input type="password" class="password" name="pass" placeholder="password"></br>
-                 <input type="password" class="retype-password" name="retype-pass" placeholder="retype-password"></br>
-                 <input type="submit" class="auth" value="Sign-up"></br></br>
-                 <a href="/sign_in">sign-in</a>
-             </form>
-            </div>
-         </div>
-       </div>
-       <script src="/static/js/auth.js"></script>
-    </body>
+  <head>
+    {% load static %}
+    <title>Sign up</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/register.css' %}"/>
+  </head>
+  <body>
+    <div class="align-form">
+      <div class="row-form">
+        {{data|safe}}
+        <div id="error-submit"></div>
+        <div class="register-form">
+          <h2>Sign up</h2>
+          <form action="" method="post" onsubmit="return registration_validate();">
+            {% csrf_token %}
+              <input type="username" class="reg-user" name="user" placeholder="Username"></br>
+              <input type="password" class="reg-pass" name="pass" placeholder="Password"></br>
+              <input type="password" class="reg-retype-pass" name="retype-pass" placeholder="Retype-Password"></br>
+              <input type="submit" class="submit" value="Sign up"></br></br>
+              <a href="/sign_in/">Sign in</a>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="{% static 'js/auth.js' %}"></script>
 </html>
