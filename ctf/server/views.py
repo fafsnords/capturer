@@ -6,11 +6,11 @@ from django.shortcuts import render, redirect
 from . models import Cipher, Stegano, ReverseEngr, Analysis, DirListing, Recon
 
 db = mysql.connector.connect(
-    host = '127.0.0.1',
-    port = '3306',
-    database = 'test',
-    username = 'root',
-    password = 'admin'
+    host = '',
+    port = '',
+    database = '',
+    username = '',
+    password = ''
 )
 
 controldb = db.cursor()
