@@ -123,15 +123,15 @@ def flag(request):
           Cipher(cipher = solver).save()
           return render(request, 'web/flag.html', {'success':'<div class="success"><p>flag submitted</p></div>'})
 
-        elif flag == 'ctf{y0u_c4n_4lways_f1nd}':
+        elif flag == 'ctf{h1de_4nd_s33k}':
           Stegano(stegano = solver).save()
           return render(request, 'web/flag.html', {'success':'<div class="success"><p>flag submitted</p></div>'})
 
-        elif flag == 'ctf{py_g0ds}':
+        elif flag == 'ctf{l0gin_Suc3ssFully}':
           ReverseEngr(reverseengr = solver).save()
           return render(request, 'web/flag.html', {'success':'<div class="success"><p>flag submitted</p></div>'})
 
-        elif flag == 'ctf{sh4rp_3ye_l1ke_a_h4wk}':
+        elif flag == 'ctf{ch1lds_pl4y}':
           Analysis(analysis = solver).save()
           return render(request, 'web/flag.html', {'success':'<div class="success"><p>flag submitted</p></div>'})
 
@@ -139,7 +139,7 @@ def flag(request):
           DirListing(dirlisting = solver).save()
           return render(request, 'web/flag.html', {'success':'<div class="success"><p>flag submitted</p></div>'})
 
-        elif flag == 'ctf{th3_g0d_4ccess}':
+        elif flag == 'ctf{s1mple_g4me}':
           Recon(recon = solver).save()
           return render(request, 'web/flag.html', {'success':'<div class="success"><p>flag submitted</p></div>'})
         else:
