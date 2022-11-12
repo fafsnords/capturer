@@ -51,3 +51,8 @@ a {
 .error-login, .error-submit {
   background-color: rgb(110, 4, 4);
 }
+@media (max-width: 480px) {
+  .align-form {
+    margin-top: 30%;
+  }
+}
