@@ -83,6 +83,14 @@ body {
   padding: 2px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+@media (max-width: 780px) {
+  .item {
+    top: 24%;
+  }
+  .challenge {
+    margin-top: 8%;
+  }
+}
 @media (max-width: 480px) {
   .item {
     top: 9%;
