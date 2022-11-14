@@ -1,5 +1,9 @@
 from django.db import models
 
+class Data(models.Model):
+   username = models.CharField(max_length = 404)
+   password = models.CharField(max_length = 404)
+   
 class Cipher(models.Model):
    cipher = models.CharField(max_length=404)
 

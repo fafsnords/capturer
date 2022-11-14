@@ -1,19 +1,11 @@
 # usr/bin/env/python
 # coding utf-8
 
-import mysql.connector
 from django.shortcuts import render, redirect
 from . models import Cipher, Stegano, ReverseEngr, Analysis, DirListing, Recon
+from django.db import connection
 
-db = mysql.connector.connect(
-    host = '',
-    port = '',
-    database = '',
-    username = '',
-    password = ''
-)
-
-controldb = db.cursor()
+controldb = connection.cursor()
 
 def index(request):
     return render(request, 'web/index.html')
@@ -26,7 +18,7 @@ def sign_up(request):
       username = request.POST['user']
       password = request.POST['pass']
 
-      controldb.execute('SELECT username FROM info')
+      controldb.execute('SELECT username FROM server_data')
 
       for uname in controldb.fetchall():
          # check if the username is already registered then its not added to a database.
@@ -35,8 +27,7 @@ def sign_up(request):
       else:
         request.session['user'] = username
         request.session['pass'] = password
-        controldb.execute('INSERT INTO info (username, password) VALUES ("{0}", "{1}")'.format(username, password))
-        db.commit()
+        controldb.execute('INSERT INTO server_data (username, password) VALUES ("{0}", "{1}")'.format(username, password))
 
         return redirect('/challenge')
 
@@ -47,7 +38,7 @@ def sign_in(request):
       username = request.POST['user']
       password = request.POST['pass']
 
-      controldb.execute('SELECT username, password FROM info')
+      controldb.execute('SELECT username, password FROM server_data')
 
       for data in controldb.fetchall():
          # if username and password is match its successfully redirected into a ctf zone.
@@ -79,25 +70,22 @@ def settings(request):
         del_username = request.POST.get('del_username')
         del_password = request.POST.get('del_password')
 
-        controldb.execute('SELECT username, password FROM info')
+        controldb.execute('SELECT username, password FROM server_data')
 
         for data in controldb.fetchall():
            # change username
            if current_username in data and password in data:
-             controldb.execute('UPDATE info SET username = "{0}" WHERE username = "{1}"'.format(new_username, current_username))
-             db.commit()
+             controldb.execute('UPDATE server_data SET username = "{0}" WHERE username = "{1}"'.format(new_username, current_username))
              return render(request, 'web/settings.html', {'success':'<div class="success"><p>Username change Successfully</p></div>'})
            
            # change password
            if username in data and current_password in data:
-             controldb.execute('UPDATE info SET password = "{0}" WHERE username = "{1}" AND password = "{2}"'.format(new_password, username, current_password))
-             db.commit()
+             controldb.execute('UPDATE server_data SET password = "{0}" WHERE username = "{1}" AND password = "{2}"'.format(new_password, username, current_password))
              return render(request, 'web/settings.html', {'success':'<div class="success"><p>Password change Successfully</p></div>'})
            
            # delete account
            if del_username in data and del_password in data:
-             controldb.execute('DELETE FROM info WHERE username = "{0}" AND password = "{1}"'.format(del_username, del_password))
-             db.commit()
+             controldb.execute('DELETE FROM server_data WHERE username = "{0}" AND password = "{1}"'.format(del_username, del_password))
              del request.session['user']
              del request.session['pass']
              return redirect('/sign_in')
