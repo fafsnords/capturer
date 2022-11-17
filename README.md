@@ -13,5 +13,4 @@ python + django framework
 ### #database
 ```
 mysql
-sqlite
 ```
