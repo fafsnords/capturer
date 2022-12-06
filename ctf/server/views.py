@@ -108,27 +108,27 @@ def flag(request):
         '''
 
         if flag == 'ctf{the_leg3nd4ry_c0de_bre4ker}':
-          Cipher(cipher = solver).save()
+          controldb.execute('INSERT INTO server_cipher (cipher) VALUES ("{0}")'.format(solver))
           return render(request, 'web/flag.html', {'success':'<div class="success"><p>flag submitted</p></div>'})
 
         elif flag == 'ctf{h1de_4nd_s33k}':
-          Stegano(stegano = solver).save()
+          controldb.execute('INSERT INTO server_stegano (stegano) VALUES ("{0}")'.format(solver))
           return render(request, 'web/flag.html', {'success':'<div class="success"><p>flag submitted</p></div>'})
 
         elif flag == 'ctf{l0gin_Suc3ssFully}':
-          ReverseEngr(reverseengr = solver).save()
+          controldb.execute('INSERT INTO server_reverseengr (reverseengr) VALUES ("{0}")'.format(solver))
           return render(request, 'web/flag.html', {'success':'<div class="success"><p>flag submitted</p></div>'})
 
         elif flag == 'ctf{ch1lds_pl4y}':
-          Analysis(analysis = solver).save()
+          controldb.execute('INSERT INTO server_analysis (analysis) VALUES ("{0}")'.format(solver))
           return render(request, 'web/flag.html', {'success':'<div class="success"><p>flag submitted</p></div>'})
 
         elif flag == 'ctf{f1nd_a_r1ght_p4th}':
-          DirListing(dirlisting = solver).save()
+          controldb.execute('INSERT INTO server_dirlisting (dirlisting) VALUES ("{0}")'.format(solver))
           return render(request, 'web/flag.html', {'success':'<div class="success"><p>flag submitted</p></div>'})
 
         elif flag == 'ctf{s1mple_g4me}':
-          Recon(recon = solver).save()
+          controldb.execute('INSERT INTO server_recon (recon) VALUES ("{0}")'.format(solver))
           return render(request, 'web/flag.html', {'success':'<div class="success"><p>flag submitted</p></div>'})
         else:
           return render(request, 'web/flag.html', {'error':'<div class="error"><p>incorrect flag</p></div>'})
